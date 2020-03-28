@@ -1,0 +1,3 @@
+- name: Install application {{nodejs-apps_name}}
+  include: "{{nodejs-apps_name}}.yml"
+
