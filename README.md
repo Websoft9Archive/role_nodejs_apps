@@ -1,4 +1,4 @@
-Ansible Role: nodejs-apps
+Ansible Role: role_nodejs_apps
 =========
 
 本role用于安装基于nodejs的应用，例如：express 框架
@@ -24,7 +24,7 @@ Ansible Role: nodejs-apps
     - {role: role_common, tags: "role_common"}
     - {role: role_cloud, tags: "role_cloud"}
     - {role: role_nodejs, tags: "role_nodejs"}
-    - {role: role_nodejs-apps, tags: "role_nodejs-apps"}
+    - {role: role_nodejs_apps, tags: "role_nodejs_apps"}
 ```
 
 ## Variables
@@ -33,11 +33,12 @@ Ansible Role: nodejs-apps
 
 | **Items**      | **Details** | **Format**  | **是否初始化** |
 | ------------------| ------------------|-----|-----|
-| nodejs-apps_name | express | 字符串 | 是 |
+| nodejs_apps_name | express | 字符串 | 是 |
 
 注意： 
 
-1. nodejs-apps_name 默认为express
+1. nodejs_apps_name 默认为express
+2. 变量名不能采用nodejs-apps_name这种方式，否则会报错
 
 ## Example
 
@@ -52,7 +53,7 @@ Ansible Role: nodejs-apps
   roles:
     - {role: role_common, tags: "role_common"}
     - {role: role_cloud, tags: "role_cloud"}
-    - {role: nodejs-apps_name, tags: "nodejs-apps_name"}
+    - {role: nodejs_apps_name, tags: "nodejs_apps_name"}
 ```
 
 ## FAQ
