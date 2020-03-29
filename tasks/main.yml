@@ -1,3 +1,8 @@
+- name: Create Directory /data/wwwroot for applications
+  file:
+    path: /data/wwwroot
+    state: directory
+    mode: 0750
+    
 - name: Install application
   include: "{{nodejs_apps_name}}.yml"
-
