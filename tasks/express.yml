@@ -3,10 +3,11 @@
     name: express-generator
     global: yes
 
+# don't use www.example.com which will be removed by 9Panel
 - name: Create express Demo Project
   shell: |
-    rm -rf www.example.com
-    express www.example.com
+    rm -rf express.example.com
+    express express.example.com
   args:
     chdir: /data/wwwroot/
 
@@ -17,7 +18,7 @@
     pm2 save
     pm2 startup
   args:
-    chdir: /data/wwwroot/www.example.com
+    chdir: /data/wwwroot/express.example.com
 
 - name: Start pm2 
   service:
